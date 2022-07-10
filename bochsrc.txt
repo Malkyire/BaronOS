@@ -1,0 +1,19 @@
+# RAM size
+megs: 32
+
+romimage: file=/opt/homebrew/Cellar/bochs/2.7/share/bochs/BIOS-bochs-latest
+vgaromimage: file=/opt/homebrew/Cellar/bochs/2.7/share/bochs/VGABIOS-lgpl-latest
+
+# Disk
+boot: disk
+ata0: enabled=1, ioaddr1=0x01f0, ioaddr2=0x03f0, irq=14
+#ata0-master: type=disk, path="scroll", mode=flat, cylinder=6, header=16, spt=63
+ata0-master: type=disk, path="scroll", mode=flat, sect_size=4096
+
+log: bochslog.log
+
+mouse: enabled=0
+clock: sync=realtime
+cpu: ips=1000000
+
+
